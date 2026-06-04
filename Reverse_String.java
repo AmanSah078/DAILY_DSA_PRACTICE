@@ -1,17 +1,9 @@
-package Dsa_Once_Again.Target_50_Questions;
+package Dsa_Once_Again.Practice_Questions_Pair_Wise;
 
 public class Reverse_String {
-
-    static void findthereverse(String str){
-
-        {
-            StringBuilder sb = new StringBuilder(str);
-     System.out.println(sb.reverse());
-        }
-    }
-    public static void main(String[] args) {
-       // String str="hello";
-        String str="java";
-        findthereverse(str);
+    public static void main(String[] args)
+    {
+        StringBuilder sb = new StringBuilder("java");
+        System.out.println(sb.reverse());
     }
 }
