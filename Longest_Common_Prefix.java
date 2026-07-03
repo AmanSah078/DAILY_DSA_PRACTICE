@@ -1,34 +1,40 @@
-package Dsa_Once_Again.Practice_Questions_Pair_Wise;
-
-public class Longest_Common_Prefix {
-
-    static String findthelongestprefix(String[] str)
-    {
-        //base string le lo taki u can compare from base to remaining
-        String base = str[0];
-        StringBuilder sb = new StringBuilder();
-        for(int i=0; i<base.length();i++)
-        {
-            char ch= base.charAt(i);
-
-            //inner looop to comare the base from the remaining
-            for(int j=1; j<str.length;j++)
-            {
-                if(i >= str[j].length() || str[j].charAt(i) != ch)
-                {
-                    // common prefix finished
-                    //   StringBuilder ko String mein convert karke return karo.
-                    return sb.toString();
+class Longest_Common_Prefix {
+	//use one method
+	static String findthellongestcompre(String[] str)
+	{
+		//To strore the String 
+		StringBuilder ans = new StringBuilder();
+		//Take the 1st string as a reference
+		String first= str[0];
+		
+		//Speciialy convert the 1st string in to the char
+		for(int i=0; i<first.length(); i++)
+		{
+	    //Change the String in to the char format
+		//char[] ch=str.charArray();
+		//char[] ch = str.toCharArray(); Not any need
+			
+		//2nd loop start from the j=1 because 1st string i get as ref na 
+			for(int j=1; j<str.length; j++)
+			{
+				//compare the first index to the length of the String
+				if(i>=str[j].length())
+				{
+					    return ans.toString();
+				}
+	            if (first.charAt(i) != str[j].charAt(i)) {
+                return ans.toString();
                 }
-            }
-            sb.append(ch);
-        }
-        return sb.toString();
-    }
-    public static void main(String[] args)
-    {
-        String[] str = {"apple","ape","april"};
-        String result = findthelongestprefix(str);
-        System.out.println(result);
-    }
+			}
+			ans.append(first.charAt(i));
+		}
+		return ans.toString();
+	}
+	
+	public static void main(String[] args)
+	{
+		String[] str={"flower","fl","flight"};
+		String result= findthellongestcompre(str);
+		System.out.println(result);
+	}
 }
