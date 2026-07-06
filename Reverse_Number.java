@@ -1,20 +1,19 @@
 class Reverse_Number {
-	static void reversenum(int n)
+	static void reverse(int n)
 	{
 		int rev=0;
 		while(n>0)
 		{
 			int digit=n%10;
-		    rev=rev*10+digit;
+			rev= rev*10+digit;
 			n=n/10;
 		}
 		System.out.println(rev);
+		
 	}
 	public static void main(String[] args)
-		
 	{
-		//int n=1234;
-		int n=907;
-		reversenum(n);
+		int n=709;
+		reverse(n);
 	}
 }
