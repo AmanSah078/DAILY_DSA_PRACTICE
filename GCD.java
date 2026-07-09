@@ -1,25 +1,20 @@
 class GCD {
-	static void greatescommondivisior(int n1, int n2)
+	static int greatescommondivisior(int a, int b)
 	{
-		int org1=n1;
-		int org2= n2;
-		int result=0;
-		if(org1>org2)
+		while(b!=0)
 		{
-	result=org1%org2;
+			int temp=b;
+			b=a%b;
+			a=temp;
 		}
-		else {
-	result=org2%org1;
-		}
-		System.out.println(result);
+	
+	return a;
 	}
 	public static void main(String[] args)
 	{
-//		int n1=15;
-//		int n2=20;
-		int n1=12;
-		int n2=18;
-		greatescommondivisior(n1,n2);
+		int a=12;
+		int b=18;
+		int result=greatescommondivisior(12,18);
+		System.out.println(result);
 	}
-	
 }
