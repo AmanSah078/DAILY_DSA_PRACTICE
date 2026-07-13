@@ -1,37 +1,31 @@
-//We r solve this problem by using the Voting Method
 class Majority_Element {
 	static void findthemajorityelement(int[] arr)
 	{
-		//intially we have to take the 2 var
-		int candidate=0;
-		int vote=0;
-		
-//Take one loop
-		for(int i=0; i<arr.length; i++)
-			
+		int votes=0;
+		int majority=arr[0];
+		for(int i=1; i<arr.length; i++)
 		{
-//Rule:1
-			if(vote==0)
+			//case:1
+			if(votes==0)
 			{
-			candidate=arr[i];
-			vote=1;	
+				votes++;
 			}
-//Rule:2
-			else if(candidate==arr[i])
+			//case:2
+			else if(arr[i]==majority)
 			{
-				vote++;
+				majority=arr[i];
+				votes++;
 			}
-//Rule:3 jb humara 	candidate is not equal to current element		
-			else {
-				vote--;
+			else  {
+				votes=0;
 			}
 		}
-		System.out.println("Majority Element will be " + candidate);
+		System.out.println(majority);
 	}
 	public static void main(String[] args)
 	{
-		int[] arr={3,2,3};
+		//int[] arr={3,2,3};
+		int[] arr={1};
 		findthemajorityelement(arr);
-		
 	}
 }
