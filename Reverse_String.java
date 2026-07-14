@@ -1,9 +1,15 @@
-package Dsa_Once_Again.Practice_Questions_Pair_Wise;
-
-public class Reverse_String {
-    public static void main(String[] args)
-    {
-        StringBuilder sb = new StringBuilder("java");
-        System.out.println(sb.reverse());
-    }
+class Reverse_String {
+static void reversestring(String str)
+{
+	//Let's goo
+//		StringBuilder sb= new StringBuilder();  
+		StringBuilder sb = new StringBuilder(str);
+	    System.out.println(sb.reverse());
+	
+}
+	public static void main(String[] args)
+	{
+//		String str="hello";
+		reversestring("hello");
+	}
 }
