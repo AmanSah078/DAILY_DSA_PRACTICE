@@ -1,27 +1,22 @@
-package Dsa_Once_Again.Target_50_Questions;
-
-public class Valid_Palindrome {
-    static boolean isPalindrome(int [] arr) {
-
-        int i=0,j=arr.length-1;
-        while(i<j){
-            if(arr[i]!=arr[j]){
-                return false;
-
-            }
-            else {
-                i++;
-                j--;
-
-            }
-        }
-        return true;
-    }
-    public static void main(String[] args)
-    {
-//        int[] arr={1,5,1};
-        int[] arr={1,2,3,2,1};
-        boolean result = isPalindrome(arr);
-        System.out.println(result);
-    }
+class Valid_Palindrome {
+	static boolean findthepalindrome(String str)
+	{
+		//must to convert in to the char
+		//arr dude u should sovle through the two pointer
+		int i=0;
+		int j = s.length() - 1;
+		while(i<j)
+		{
+			if(charAt(i)==charAt(j))
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+	public static void main(String[] args)
+	{
+		boolean result= findthepalindrome(str);
+		System.out.println(result);
+	}
 }
